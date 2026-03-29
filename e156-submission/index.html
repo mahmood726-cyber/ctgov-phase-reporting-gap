@@ -80,6 +80,48 @@
       .hero-rail{grid-template-columns:1fr}
       .body-copy{font-size:22px}
     }
+    
+    .series-bar{
+      display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+      padding:12px 14px;margin:0 0 18px;background:rgba(255,255,255,.88);
+      border:1px solid var(--line);box-shadow:0 10px 24px rgba(17,17,17,.03)
+    }
+    .series-label{
+      font:700 10px var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)
+    }
+    .series-nav{display:flex;gap:10px;flex-wrap:wrap}
+    .series-chip{
+      display:inline-block;padding:9px 12px;border:1px solid var(--line);
+      background:#fff;font:700 11px var(--sans);letter-spacing:.08em;text-transform:uppercase;color:#222;border-radius:999px
+    }
+    .series-chip.current{border-color:var(--ink);background:#f3ede2}
+    .hero-links{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 8px}
+    .hero-link{
+      display:inline-block;padding:12px 16px;background:#fff;border:1px solid var(--line);
+      font:700 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#222;border-radius:999px
+    }
+    .hero-link.primary{background:var(--ink);border-color:var(--ink);color:#fff}
+    .chapter-intro{font:15px/1.8 var(--sans);color:#4f4a42;max-width:70ch;margin:0 0 18px}
+    .annotation{
+      margin-top:12px;padding:12px 14px;background:#faf6ee;border-left:4px solid var(--gold);
+      font:13px/1.7 var(--sans);color:#4b463e
+    }
+    .series-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:18px
+    }
+    .series-card{
+      display:block;padding:16px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:8px
+    }
+    .series-card-kicker{
+      font:700 10px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px
+    }
+    .series-card-title{font-size:20px;line-height:1.15;color:#1b1b1b;margin:0 0 8px}
+    .series-card-copy{font:13px/1.7 var(--sans);color:#5a544a;margin:0}
+    .quick-jump{display:grid;gap:10px;margin:14px 0 18px}
+    @media (max-width:640px){
+      .series-bar{padding:10px 12px}
+      .hero-links{display:grid;grid-template-columns:1fr}
+    }
     </style>
 </head>
 <body>
@@ -88,15 +130,20 @@
       <div class="brand">CT.gov Phase Reporting Gap</div>
       <div class="brand-meta">2026-03-29 | full-registry ct.gov audit | plots, figures, and e156 bundle</div>
     </div>
+    <div class="series-bar">
+      <div class="series-label">Series</div>
+      <div class="series-nav"><a class='series-chip' href='https://mahmood726-cyber.github.io/ctgov-industry-disclosure-gap/'>Industry Disclosure Gap</a><a class='series-chip' href='https://mahmood726-cyber.github.io/ctgov-sponsor-class-hiddenness/'>Sponsor-Class Hiddenness</a><a class='series-chip current' href='https://mahmood726-cyber.github.io/ctgov-phase-reporting-gap/'>Phase Reporting Gap</a><a class='series-chip' href='https://mahmood726-cyber.github.io/ctgov-structural-missingness/'>Structural Missingness</a></div>
+    </div>
     <section class="hero">
       <div class="eyebrow">E156 Micro-Paper</div>
       <h1>CT.gov Phase Reporting Gap</h1>
       <p class="lede">A 156-word phase-based account of where CT.gov reporting silence is most concentrated across the development pathway.</p>
+      <div class='hero-links'><a class='hero-link primary' href='https://mahmood726-cyber.github.io/ctgov-phase-reporting-gap/dashboard.html'>Open dashboard</a><a class='hero-link' href='https://mahmood726-cyber.github.io/ctgov-phase-reporting-gap/e156-submission/index.html'>Read E156 paper</a><a class='hero-link' href='https://mahmood726-cyber.github.io/ctgov-phase-reporting-gap/e156-submission/protocol.md'>Protocol</a><a class='hero-link' href='https://mahmood726-cyber.github.io/ctgov-hiddenness-atlas/'>Series hub</a></div>
       <div class="hero-rail"><div>Phase I</div><div>NA bucket</div><div>Phase III</div><div>Phase IV</div></div>
     </section>
     <div class="grid">
-      <main><article class='card'><h2 class='section-title'>Paper</h2><p class='body-copy'>Does reporting failure in ClinicalTrials.gov differ systematically by trial phase? We analysed the March 29, 2026 full-registry snapshot and grouped interventional studies by reported phase before calculating eligible two-year no-results rates and absolute missing-results stock. The analysis used 441,191 interventional studies overall, with 290,524 closed interventional studies and 249,507 eligible older studies driving the primary comparisons. Phase I had the highest eligible two-year no-results rate at 76.7 percent, followed by the large NA phase bucket at 65.5 percent and early phase I at 64.3 percent. By absolute count, the NA bucket contributed 96,605 unresolved two-year no-results studies, far exceeding later phases because of its scale, which shows phase structure shapes reporting behavior even before sponsor mix and therapeutic area are considered jointly. Phase III and phase IV performed better than phase I, but still remained far from transparent at 45.5 percent and 52.4 percent respectively. These phase estimates describe registry-visible non-disclosure rather than confirmed regulatory violation.</p><div class='metrics'><div class='metric'><div class='metric-label'>Phase I rate</div><div class='metric-value'>76.7%</div><div class='metric-note'>Highest rate</div></div><div class='metric'><div class='metric-label'>NA stock</div><div class='metric-value'>96,605</div><div class='metric-note'>Largest count</div></div><div class='metric'><div class='metric-label'>Phase III rate</div><div class='metric-value'>45.5%</div><div class='metric-note'>Later-stage benchmark</div></div><div class='metric'><div class='metric-label'>Phase IV rate</div><div class='metric-value'>52.4%</div><div class='metric-note'>Post-marketing benchmark</div></div></div></article></main>
-      <aside class="card"><h2 class='section-title'>Outside Notes</h2><dl class='note-grid'><dt>App</dt><dd>CT.gov Phase Reporting Gap dashboard</dd><dt>Data</dt><dd>441,191 interventional studies from the March 29, 2026 full-registry snapshot grouped by phase</dd><dt>Code</dt><dd><a href='https://github.com/mahmood726-cyber/ctgov-phase-reporting-gap'>https://github.com/mahmood726-cyber/ctgov-phase-reporting-gap</a></dd><dt>Version</dt><dd>1.0.0</dd></dl><div class='links'><a class='link-card' href='assets/dashboard.html'>Dashboard</a><a class='link-card' href='paper.md'>Paper markdown</a><a class='link-card' href='protocol.md'>Protocol markdown</a></div></aside>
+      <main><article class='card'><h2 class='section-title'>Paper</h2><div class='quick-jump'><a class='link-card' href='https://mahmood726-cyber.github.io/ctgov-phase-reporting-gap/dashboard.html'>Open dashboard at root</a><a class='link-card' href='https://mahmood726-cyber.github.io/ctgov-phase-reporting-gap/e156-submission/index.html'>Read E156 micro-paper</a><a class='link-card' href='https://mahmood726-cyber.github.io/ctgov-phase-reporting-gap/e156-submission/protocol.md'>Open protocol</a><a class='link-card' href='https://mahmood726-cyber.github.io/ctgov-hiddenness-atlas/'>Open series hub</a></div><p class='body-copy'>Does reporting failure in ClinicalTrials.gov differ systematically by trial phase? We analysed the March 29, 2026 full-registry snapshot and grouped interventional studies by reported phase before calculating eligible two-year no-results rates and absolute missing-results stock. The analysis used 441,191 interventional studies overall, with 290,524 closed interventional studies and 249,507 eligible older studies driving the primary comparisons. Phase I had the highest eligible two-year no-results rate at 76.7 percent, followed by the large NA phase bucket at 65.5 percent and early phase I at 64.3 percent. By absolute count, the NA bucket contributed 96,605 unresolved two-year no-results studies, far exceeding later phases because of its scale, which shows phase structure shapes reporting behavior even before sponsor mix and therapeutic area are considered jointly. Phase III and phase IV performed better than phase I, but still remained far from transparent at 45.5 percent and 52.4 percent respectively. These phase estimates describe registry-visible non-disclosure rather than confirmed regulatory violation.</p><div class='metrics'><div class='metric'><div class='metric-label'>Phase I rate</div><div class='metric-value'>76.7%</div><div class='metric-note'>Highest rate</div></div><div class='metric'><div class='metric-label'>NA stock</div><div class='metric-value'>96,605</div><div class='metric-note'>Largest count</div></div><div class='metric'><div class='metric-label'>Phase III rate</div><div class='metric-value'>45.5%</div><div class='metric-note'>Later-stage benchmark</div></div><div class='metric'><div class='metric-label'>Phase IV rate</div><div class='metric-value'>52.4%</div><div class='metric-note'>Post-marketing benchmark</div></div></div></article></main>
+      <aside class="card"><h2 class='section-title'>Outside Notes</h2><dl class='note-grid'><dt>App</dt><dd>CT.gov Phase Reporting Gap dashboard</dd><dt>Data</dt><dd>441,191 interventional studies from the March 29, 2026 full-registry snapshot grouped by phase</dd><dt>Code</dt><dd><a href='https://github.com/mahmood726-cyber/ctgov-phase-reporting-gap'>https://github.com/mahmood726-cyber/ctgov-phase-reporting-gap</a></dd><dt>Version</dt><dd>1.0.0</dd></dl><div class='links'><a class='link-card' href='https://mahmood726-cyber.github.io/ctgov-phase-reporting-gap/dashboard.html'>Dashboard</a><a class='link-card' href='https://mahmood726-cyber.github.io/ctgov-phase-reporting-gap/e156-submission/paper.md'>Paper markdown</a><a class='link-card' href='https://mahmood726-cyber.github.io/ctgov-phase-reporting-gap/e156-submission/protocol.md'>Protocol markdown</a></div><h2 class='section-title'>Across The Series</h2><div class='series-grid'><a class='series-card' href='https://mahmood726-cyber.github.io/ctgov-industry-disclosure-gap/'><div class='series-card-kicker'>Industry Disclosure Gap</div><div class='series-card-title'>CT.gov Industry Disclosure Gap</div><p class='series-card-copy'>A standalone E156 project on how much long-past non-disclosure and structural sparsity remain inside industry-linked ClinicalTrials.gov records.</p></a><a class='series-card' href='https://mahmood726-cyber.github.io/ctgov-sponsor-class-hiddenness/'><div class='series-card-kicker'>Sponsor-Class Hiddenness</div><div class='series-card-title'>CT.gov Sponsor-Class Hiddenness</div><p class='series-card-copy'>A standalone E156 project comparing sponsor classes on rate, stock, and structural sparsity rather than flattening everything into one leaderboard.</p></a><a class='series-card' href='https://mahmood726-cyber.github.io/ctgov-structural-missingness/'><div class='series-card-kicker'>Structural Missingness</div><div class='series-card-title'>CT.gov Structural Missingness</div><p class='series-card-copy'>A standalone E156 project on the descriptive fields that disappear from ClinicalTrials.gov even before results reporting is considered.</p></a></div></aside>
     </div>
     <div class="footer">
       <a href="https://github.com/mahmood726-cyber/ctgov-phase-reporting-gap">Source on GitHub</a> |
