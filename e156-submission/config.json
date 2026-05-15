@@ -3,7 +3,7 @@
   "slug": "ctgov-phase-reporting-gap",
   "author": "Mahmood Ahmad",
   "date": "2026-03-29",
-  "path": "C:\\Projects\\ctgov-phase-reporting-gap",
+  "path": "C:\\Projects\\ctgov-analyses/ctgov-phase-reporting-gap",
   "type": "methods",
   "primary_estimand": "Eligible 2-year no-results rate by reported trial phase",
   "summary": "A standalone E156 project on how reporting gaps change by trial phase, showing that phase structure matters alongside sponsor class.",
@@ -48,10 +48,11 @@
     "validation": "FULL REGISTRY RUN"
   },
   "affiliation": "Tahir Heart Institute",
-  "email": "author@example.com",
+  "email": "mahmood.ahmad2@nhs.net",
   "references": [
     "ClinicalTrials.gov API v2. National Library of Medicine. Accessed March 29, 2026.",
     "Page MJ, McKenzie JE, Bossuyt PM, et al. The PRISMA 2020 statement. BMJ. 2021;372:n71.",
     "Borenstein M, Hedges LV, Higgins JPT, Rothstein HR. Introduction to Meta-Analysis. 2nd ed. Wiley; 2021."
-  ]
+  ],
+  "submitted": false
 }
