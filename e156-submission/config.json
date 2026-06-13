@@ -3,7 +3,7 @@
   "slug": "ctgov-phase-reporting-gap",
   "author": "Mahmood Ahmad",
   "date": "2026-03-29",
-  "path": "C:\\Projects\\ctgov-analyses/ctgov-phase-reporting-gap",
+  "path": "https://github.com/mahmood726-cyber/ctgov-phase-reporting-gap",
   "type": "methods",
   "primary_estimand": "Eligible 2-year no-results rate by reported trial phase",
   "summary": "A standalone E156 project on how reporting gaps change by trial phase, showing that phase structure matters alongside sponsor class.",
